@@ -1,13 +1,11 @@
 import React from 'react';
-import Input from "./components/input";
-import Output from "./components/output";
+import Home from "./components/home";
 import './App.css';
 
 function App() {
   return (
     <main role="main" className="container">
-       <Input />
-       <Output />
+       <Home />
       </main>
   );
 }
