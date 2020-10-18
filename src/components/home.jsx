@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import http from "../services/httpService";
 import Input from "./input";
 import Output from "./output";
 
@@ -7,11 +8,20 @@ class Home extends Component {
 
     setOriginalUrl = (e) => {
         console.log('clicked ' + this.state.originalUrl);
+        this.handleAdd(this.state.originalUrl);
     }
+
+    handleAdd = async (string) => {
+        const response = await http.post('http://localhost:8080/squeezer', string);
+        console.log(response.data.shortenedURL);
+    
+      };
+
+    // localhost:8080/squeezer
 
     changeOriginalUrl = (e) => {
         console.log("change " + e.currentTarget.value);
-        // this.setState({originalUrl: e.target.value});
+        this.setState({originalUrl: e.target.value});
     }
     render() { 
         return ( 
