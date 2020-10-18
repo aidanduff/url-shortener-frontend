@@ -7,7 +7,7 @@ class Output extends Component {
         return ( 
 
       <div className="alert alert-dark" role="alert">
-      A simple dark alert with <a href="www.google.com" class="alert-link">an example link</a>. Give it a click if you like.
+      A simple dark alert with <a href="www.google.com" className="alert-link">an example link</a>. Give it a click if you like.
     </div>
 
       );
