@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import http from "../services/httpService";
+import axios from "axios";
 import Input from "./input";
 import Output from "./output";
 
@@ -12,8 +13,17 @@ class Home extends Component {
     }
 
     handleAdd = async (string) => {
-        const response = await http.post('http://localhost:8080/squeezer', string);
-        console.log(response.data.shortenedURL);
+        // const response = await http.post('http://localhost:8080/squeezer', string);
+        // console.log(response.data);
+
+        const config = {
+            headers: {
+              "content-type": "text/html",
+            },
+          };
+          const response = await http.post('http://localhost:8080/squeezer', string, config);
+
+          console.log(response.data);
     
       };
 
