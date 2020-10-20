@@ -5,10 +5,11 @@ class Output extends Component {
 
     render(props) { 
       const shortenedUrl = this.props.shortenedUrl;
+      if (shortenedUrl.length <= 2) return null;
         return ( 
 
       <div className="alert alert-dark" role="alert">
-      A simple dark alert with <a href={shortenedUrl} className="alert-link">an example link</a>. Give it a click if you like.
+      {shortenedUrl} <a href={shortenedUrl} className="alert-link">an example link</a>. Give it a click if you like.
     </div>
 
       );
