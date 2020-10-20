@@ -5,7 +5,9 @@ import Input from "./input";
 import Output from "./output";
 
 class Home extends Component {
-    state = { originalUrl: '' }
+    state = { originalUrl: '', 
+              shortenedUrl: ''
+            }
 
     setOriginalUrl = (e) => {
         console.log('clicked ' + this.state.originalUrl);
@@ -13,9 +15,6 @@ class Home extends Component {
     }
 
     handleAdd = async (string) => {
-        // const response = await http.post('http://localhost:8080/squeezer', string);
-        // console.log(response.data);
-
         const config = {
             headers: {
               "content-type": "text/html",
@@ -23,11 +22,11 @@ class Home extends Component {
           };
           const response = await http.post('http://localhost:8080/squeezer', string, config);
 
-          console.log(response.data);
+          this.setState({shortenedUrl: response.data.shortenedURL })
+
+          console.log(this.state.shortenedUrl);
     
       };
-
-    // localhost:8080/squeezer
 
     changeOriginalUrl = (e) => {
         console.log("change " + e.currentTarget.value);
@@ -38,7 +37,7 @@ class Home extends Component {
         <React.Fragment>
             <Input onUrlEntry={this.setOriginalUrl}
             onURLChange={this.changeOriginalUrl}/> 
-            <Output />
+            <Output shortenedUrl={this.state.shortenedUrl}/>
         </React.Fragment>);
     }
 }
