@@ -9,7 +9,7 @@ class Output extends Component {
         return ( 
 
       <div className="alert alert-dark" role="alert">
-      {shortenedUrl} <a href={shortenedUrl} className="alert-link">an example link</a>. Give it a click if you like.
+      <a href={shortenedUrl} className="alert-link">{shortenedUrl}</a>
     </div>
 
       );

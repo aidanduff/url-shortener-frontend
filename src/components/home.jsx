@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import http from "../services/httpService";
-import axios from "axios";
 import Input from "./input";
 import Output from "./output";
 
