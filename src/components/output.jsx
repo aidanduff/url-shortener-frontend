@@ -10,6 +10,11 @@ class Output extends Component {
 
       <div className="alert alert-dark" role="alert">
       <a href={shortenedUrl} className="alert-link">{shortenedUrl}</a>
+      {/* <div> */}
+          <button onClick={() => {navigator.clipboard.writeText(shortenedUrl)}} className="btn btn success">
+            Copy to Clipboard
+          </button>
+        {/* </div> */}
     </div>
 
       );

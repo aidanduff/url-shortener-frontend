@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import http from "../services/httpService";
 import Input from "./input";
 import Output from "./output";
+// import Copy from "./copy";
 
 class Home extends Component {
     state = { originalUrl: '', 
@@ -37,6 +38,7 @@ class Home extends Component {
             <Input onUrlEntry={this.setOriginalUrl}
             onURLChange={this.changeOriginalUrl}/> 
             <Output shortenedUrl={this.state.shortenedUrl}/>
+            {/* <Copy shortenedUrl={this.state.shortenedUrl}/> */}
         </React.Fragment>);
     }
 }
