@@ -34,7 +34,7 @@ class Home extends Component {
     render() { 
         return ( 
         <React.Fragment>
-            <div className="container">
+            <div className="container p-3 mb-2 bg-dark text-white">
             <Input onUrlEntry={this.setOriginalUrl}
             onURLChange={this.changeOriginalUrl}/> 
             <Output shortenedUrl={this.state.shortenedUrl}/>
