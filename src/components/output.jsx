@@ -9,10 +9,10 @@ class Output extends Component {
         return ( 
 
       // <div className="alert alert-dark" role="alert" >
-      <div className="p-3 mb-2 bg-info text-white">
-      <a href={shortenedUrl} className="alert-link">{shortenedUrl}</a>
+      <div className="p-3 mb-2 bg-light text-dark row align-items-center">
+      <a href={shortenedUrl} className="alert-link col-9">{shortenedUrl}</a>
       {/* <div> */}
-          <button onClick={() => {navigator.clipboard.writeText(shortenedUrl)}} className="btn btn-success float-right mb-2">
+          <button onClick={() => {navigator.clipboard.writeText(shortenedUrl)}} className="btn btn-success float-right mb-2 col-3">
             Copy to Clipboard
           </button>
         {/* </div> */}

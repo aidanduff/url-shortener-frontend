@@ -34,9 +34,11 @@ class Home extends Component {
     render() { 
         return ( 
         <React.Fragment>
+            <div className="container">
             <Input onUrlEntry={this.setOriginalUrl}
             onURLChange={this.changeOriginalUrl}/> 
             <Output shortenedUrl={this.state.shortenedUrl}/>
+            </div>
         </React.Fragment>);
     }
 }
