@@ -9,7 +9,6 @@ class Home extends Component {
             }
 
     setOriginalUrl = (e) => {
-        console.log('clicked ' + this.state.originalUrl);
         this.handleAdd(this.state.originalUrl);
     }
 
@@ -19,12 +18,9 @@ class Home extends Component {
               "content-type": "text/html",
             },
           };
+
           const response = await http.post('http://localhost:8080/squeezer', string, config);
-
-          this.setState({shortenedUrl: response.data.shortenedURL })
-
-          console.log(this.state.shortenedUrl);
-    
+          this.setState({shortenedUrl: response.data.shortenedURL });
       };
 
     changeOriginalUrl = (e) => {
