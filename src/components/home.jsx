@@ -3,6 +3,7 @@ import http from "../services/httpService";
 import Input from "./input";
 import Output from "./output";
 import Logo from "./logo";
+import BottomNav from './bottomNav';
 
 class Home extends Component {
     state = { originalUrl: '', 
@@ -37,6 +38,7 @@ class Home extends Component {
             onURLChange={this.changeOriginalUrl}/> 
             <Output shortenedUrl={this.state.shortenedUrl}/>
             </div>
+            <BottomNav />
         </React.Fragment>);
     }
 }
