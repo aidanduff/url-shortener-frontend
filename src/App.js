@@ -4,9 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <main role="main" className="container">
        <Home />
-      </main>
   );
 }
 

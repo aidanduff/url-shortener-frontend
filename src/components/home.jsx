@@ -4,6 +4,8 @@ import Input from "./input";
 import Output from "./output";
 import Logo from "./logo";
 import BottomNav from './bottomNav';
+import Jumbotron from './jumbotron';
+import Navbar from './navbar';
 
 class Home extends Component {
     state = { originalUrl: '', 
@@ -32,7 +34,9 @@ class Home extends Component {
     render() { 
         return ( 
         <React.Fragment>
-            <Logo />
+            <Navbar />
+            <Jumbotron />
+            {/* <Logo /> */}
             <div className="container p-3 mb-2 bg-dark text-white">
             <Input onUrlEntry={this.setOriginalUrl}
             onURLChange={this.changeOriginalUrl}/> 
