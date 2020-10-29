@@ -23,7 +23,7 @@ class Home extends Component {
             },
           };
 
-          const response = await http.post('http://localhost:8080/squeezer', string, config);
+          const response = await http.post('http://localhost:8080/skweez.it', string, config);
           this.setState({shortenedUrl: response.data.shortenedURL });
       };
 

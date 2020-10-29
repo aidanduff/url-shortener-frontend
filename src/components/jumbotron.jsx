@@ -5,7 +5,7 @@ import Logo from './logo';
 const Jumbotron = () => {
     return ( 
         <div className="jumbotron " style={{ backgroundColor: "#f88642" }}>
-        <div className="container">
+        <div className="container mt-4">
           <p className="row"><Logo /></p>
           {/* <h1 className="display-3 row">Hello, world!</h1> */}
           <h2>Welcome to Skweezit!</h2>
