@@ -7,9 +7,6 @@ class  Input extends Component {
         this.setState({input: e.target.value});
     }
 
-    handleClick = (e) => {
-        console.log(this.state.input);
-    }
     render() { 
         return ( 
         <div className="input-group mb-3 mt-2">

@@ -28,7 +28,6 @@ class Home extends Component {
       };
 
     changeOriginalUrl = (e) => {
-        console.log("change " + e.currentTarget.value);
         this.setState({originalUrl: e.target.value});
     }
     render() { 
