@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import http from "../services/httpService";
 import Input from "./input";
 import Output from "./output";
-import Logo from "./logo";
-import BottomNav from './bottomNav';
-import Jumbotron from './jumbotron';
-import Navbar from './navbar';
 
 class Home extends Component {
     state = { originalUrl: '', 
@@ -33,15 +29,11 @@ class Home extends Component {
     render() { 
         return ( 
         <React.Fragment>
-            <Navbar />
-            <Jumbotron />
-            {/* <Logo /> */}
             <div className="container p-3 mb-2 bg-dark text-white">
             <Input onUrlEntry={this.setOriginalUrl}
             onURLChange={this.changeOriginalUrl}/> 
             <Output shortenedUrl={this.state.shortenedUrl}/>
             </div>
-            <BottomNav />
         </React.Fragment>);
     }
 }
