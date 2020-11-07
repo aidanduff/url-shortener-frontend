@@ -8,7 +8,7 @@ const BottomNav = () => {
           href="https://github.com/aidanduff/weather-data-ui"
           className="text-right"
         >
-          <i className="fa fa-github fa-github-navbar fa-2x"> </i>
+          <i className="fa fa-github fa-github-navbar fa-2x" style={{color: "#f88642"}}> </i>
         </a>
         &nbsp; &copy;Aidan Duff 2020
       </p>
