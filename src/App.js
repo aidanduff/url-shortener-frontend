@@ -14,9 +14,8 @@ function App() {
       <Jumbotron />
        <Switch>
        <Route path="/about" component={About}></Route>
-          <Route path="/home" component={Home}></Route>
-          
-          {/* <Redirect from="/" exact to="/home" /> */}
+          <Route path="/home" component={Home}></Route>  
+          <Redirect from="/" exact to="/home" />
           <Redirect to="/not-found" />
         </Switch>
        <BottomNav />
