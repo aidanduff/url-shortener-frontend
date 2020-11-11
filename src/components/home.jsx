@@ -19,7 +19,7 @@ class Home extends Component {
             },
           };
 
-          const response = await http.post('https://skweezit-server.herokuapp.com/skweez.it', string, config);
+          const response = await http.post('https://skweezit-server.herokuapp.com/home', string, config);
           this.setState({shortenedUrl: response.data.shortenedURL });
       };
 
