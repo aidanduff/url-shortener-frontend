@@ -18,7 +18,6 @@ class Home extends Component {
               "content-type": "text/html",
             },
           };
-
           const response = await http.post('https://skweezit-server.herokuapp.com/home', string, config);
           this.setState({shortenedUrl: response.data.shortenedURL });
       };
