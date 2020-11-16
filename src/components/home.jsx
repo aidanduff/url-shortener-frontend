@@ -7,9 +7,18 @@ class Home extends Component {
     state = { originalUrl: '', 
               shortenedUrl: ''
             }
+    
+    componentDidMount(){
+        this.wakeServer();
+    }
 
     setOriginalUrl = (e) => {
         this.handleAdd(this.state.originalUrl);
+    }
+
+    wakeServer = async () => {
+        await http.get('https://skweezit-server.herokuapp.com/'); //Wake up sleeping Heroku server immediately
+
     }
 
     handleAdd = async (string) => {
