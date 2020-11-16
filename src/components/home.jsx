@@ -9,6 +9,7 @@ class Home extends Component {
             }
     
     componentDidMount(){
+        console.log("in cdm");
         this.wakeServer();
     }
 
@@ -18,6 +19,7 @@ class Home extends Component {
 
     wakeServer = async () => {
         await http.get('https://skweezit-server.herokuapp.com/'); //Wake up sleeping Heroku server immediately
+        console.logo("in wakeServer");
 
     }
 
