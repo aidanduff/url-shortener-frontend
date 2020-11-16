@@ -19,7 +19,7 @@ class Home extends Component {
 
     wakeServer = async () => {
         await http.get('https://skweezit-server.herokuapp.com/'); //Wake up sleeping Heroku server immediately
-        console.logo("in wakeServer");
+        console.log("in wakeServer");
 
     }
 
