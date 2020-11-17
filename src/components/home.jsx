@@ -9,8 +9,10 @@ class Home extends Component {
             }
     
     componentDidMount(){
-        console.log("in cdm");
-        this.wakeServer();
+        http.get('https://skweezit-server.herokuapp.com/').then((response) =>
+            {
+                console.log("response");
+            });
     }
 
     setOriginalUrl = (e) => {
