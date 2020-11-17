@@ -11,7 +11,7 @@ class Home extends Component {
     componentDidMount(){
         http.get('https://skweezit-server.herokuapp.com/').then((response) =>
             {
-                console.log("response");
+                console.log(response);
             });
     }
 
