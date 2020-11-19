@@ -11,7 +11,7 @@ class Home extends Component {
     componentDidMount(){
         http.get('https://skweezit-server.herokuapp.com/').then((response) =>
             {
-                console.log(response);
+                console.log("Ready...");
             });
     }
 
@@ -21,8 +21,6 @@ class Home extends Component {
 
     wakeServer = async () => {
         await http.get('https://skweezit-server.herokuapp.com/'); //Wake up sleeping Heroku server immediately
-        console.log("in wakeServer");
-
     }
 
     handleAdd = async (string) => {
